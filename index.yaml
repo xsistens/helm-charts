@@ -67,6 +67,74 @@ entries:
     name: airbyte
     type: application
     urls:
+    - airbyte-0.514.1.tgz
+    version: 0.514.1
+  - apiVersion: v2
+    appVersion: 0.63.14
+    created: "2024-08-08T13:59:35.500988968Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    - condition: airbyte-bootloader.enabled
+      name: airbyte-bootloader
+      repository: https://airbytehq.github.io/helm-charts/
+      version: 0.414.0
+    - condition: temporal.enabled
+      name: temporal
+      repository: https://airbytehq.github.io/helm-charts/
+      version: 0.414.0
+    - condition: webapp.enabled
+      name: webapp
+      repository: https://airbytehq.github.io/helm-charts/
+      version: 0.414.0
+    - condition: server.enabled
+      name: server
+      repository: https://airbytehq.github.io/helm-charts/
+      version: 0.414.0
+    - condition: worker.enabled
+      name: worker
+      repository: https://airbytehq.github.io/helm-charts/
+      version: 0.414.0
+    - condition: workload-api-server.enabled
+      name: workload-api-server
+      repository: https://airbytehq.github.io/helm-charts/
+      version: 0.414.0
+    - condition: workload-launcher.enabled
+      name: workload-launcher
+      repository: https://airbytehq.github.io/helm-charts/
+      version: 0.414.0
+    - condition: pod-sweeper.enabled
+      name: pod-sweeper
+      repository: https://airbytehq.github.io/helm-charts/
+      version: 0.414.0
+    - condition: metrics.enabled
+      name: metrics
+      repository: https://airbytehq.github.io/helm-charts/
+      version: 0.414.0
+    - condition: cron.enabled
+      name: cron
+      repository: https://airbytehq.github.io/helm-charts/
+      version: 0.414.0
+    - condition: connector-builder-server.enabled
+      name: connector-builder-server
+      repository: https://airbytehq.github.io/helm-charts/
+      version: 0.414.0
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://airbytehq.github.io/helm-charts/
+      version: 0.414.0
+    - condition: keycloak-setup.enabled
+      name: keycloak-setup
+      repository: https://airbytehq.github.io/helm-charts/
+      version: 0.414.0
+    description: Helm chart to deploy airbyte
+    digest: dbd56364f4e9b941ce9e501c3f0de8f235941774998eef2f37cb8a2eb2b8c510
+    name: airbyte
+    type: application
+    urls:
     - airbyte-0.514.0.tgz
     version: 0.514.0
   - apiVersion: v2
